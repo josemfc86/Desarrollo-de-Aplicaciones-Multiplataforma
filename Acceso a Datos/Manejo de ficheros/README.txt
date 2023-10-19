@@ -1,0 +1,1 @@
+En este proyecto mediante el IDE Netbeans y el lenguaje de programación Java se realizó la creación de un fichero “.DAT” de acceso aleatorio en el cual incluimos 5 empleados con 3 atributos, este fichero fue convertido a XML mediante la técnica DOM, por último se visualizo el fichero “baloncesto.xml” usando las técnicas “DOM” y “SAX”.

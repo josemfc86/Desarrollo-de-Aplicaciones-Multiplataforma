@@ -1,0 +1,1 @@
+En este proyecto se llevo a cabo la realización de consultas mediante los lenguajes XPATH y XQUERY a una base de datos XML nativa como es eXist utilizando su interface, finalmente mediante java nos conectamos a dicha base de datos para realizar las consultas utilizando el IDE Netbeans.
