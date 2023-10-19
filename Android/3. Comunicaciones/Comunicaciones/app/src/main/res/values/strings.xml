@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Comunicaciones</string>
+    <string name="Url">Introduzca una URL</string>
+    <string name="Cargar">Cargar</string>
+</resources>

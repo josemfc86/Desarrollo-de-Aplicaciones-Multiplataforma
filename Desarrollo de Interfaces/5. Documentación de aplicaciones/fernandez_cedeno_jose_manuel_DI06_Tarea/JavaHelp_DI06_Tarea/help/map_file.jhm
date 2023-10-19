@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="2.0"> 
+    <mapID target="VentanaPrincipal" url="html/VentanaPrincipal.html"/> 
+    <mapID target="CreacionComponente1" url="html/CreacionComponente_parte1.html"/>
+    <mapID target="CreacionComponente2" url="html/CreacionComponente_parte2.html"/>
+    <mapID target="UsoComponente1" url="html/UsoComponente_parte1.html"/>
+    <mapID target="UsoComponente2" url="html/UsoComponente_parte2.html"/>
+</map>

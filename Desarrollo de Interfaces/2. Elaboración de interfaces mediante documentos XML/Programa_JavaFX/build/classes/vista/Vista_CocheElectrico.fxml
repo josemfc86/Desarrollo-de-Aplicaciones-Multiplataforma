@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CocheElectricoController">
+   <children>
+      <AnchorPane layoutX="4.0" layoutY="-4.0" prefHeight="500.0" prefWidth="740.0" scaleShape="false">
+         <children>
+            <Label layoutX="274.0" layoutY="33.0" prefHeight="50.0" prefWidth="193.0" text="COCHE ELÉCTRICO" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+            </Label>
+            <Separator layoutX="25.0" layoutY="80.0" prefHeight="7.0" prefWidth="691.0" />
+            <GridPane layoutX="25.0" layoutY="100.0" prefHeight="129.0" prefWidth="691.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="20.0" prefWidth="64.0" text="NOMBRE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="64.0" text="DNI/CIF" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="74.0" text="APELLIDOS" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="75.0" text="TELEFONO" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TF_Nombre" prefHeight="25.0" prefWidth="280.0" promptText="Ingrese el nombre del conductor." GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="TF_Apellidos" prefHeight="25.0" prefWidth="280.0" promptText="Ingrese los apellidos del conductor." GridPane.rowIndex="4" />
+                  <TextField fx:id="TF_ID" prefHeight="25.0" prefWidth="245.0" promptText="Indique el DNI o CIF del conductor." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="TF_Telefono" prefHeight="25.0" prefWidth="280.0" promptText="Indique un número de contacto del conductor." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <Separator layoutX="25.0" layoutY="247.0" prefHeight="7.0" prefWidth="691.0" />
+            <GridPane layoutX="25.0" layoutY="272.0" prefHeight="129.0" prefWidth="691.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="185.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="141.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="0.0" prefWidth="48.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="61.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="260.0" minWidth="10.0" prefWidth="260.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="20.0" prefWidth="64.0" text="TIPO">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="163.0" text="FECHA DE DEVOLUCIÓN" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="141.0" text="FECHA DE RECOGIDA" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="178.0" text="NÚMERO DE KILOMETROS" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="L_Edad" prefHeight="20.0" prefWidth="132.0" text="Edad del conductor" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="L_Cables" prefHeight="20.0" prefWidth="140.0" text="Requiere cables de carga" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TF_Kms" GridPane.rowIndex="4" />
+                  <TextField fx:id="TF_Edad" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <RadioButton fx:id="RB_Cables" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                  <ComboBox fx:id="CB_Tipo" onAction="#Escoger" prefHeight="31.0" prefWidth="159.0" promptText="Escoger tipo de coche" visibleRowCount="5" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="DP_Recogida" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="DP_Devolucion" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="25.0" layoutY="415.0" prefHeight="17.0" prefWidth="480.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="81.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="135.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="135.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="135.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="20.0" prefWidth="64.0" text="EXTRAS">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="CB_Cadenas" mnemonicParsing="false" text="Cadenas" GridPane.columnIndex="1" />
+                  <CheckBox fx:id="CB_SillaB" mnemonicParsing="false" text="Silla de bebe" GridPane.columnIndex="2" />
+                  <CheckBox fx:id="CB_Seguro" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="Seguro a todo riesgo" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="106.0" layoutY="447.0" prefHeight="17.0" prefWidth="370.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="264.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="106.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <CheckBox fx:id="CB_CancelacionG" mnemonicParsing="false" text="Cancelación gratuita" />
+                  <CheckBox fx:id="CB_NoPrecisa" mnemonicParsing="false" text="No precisa" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Pane layoutX="503.0" layoutY="381.0" prefHeight="118.0" prefWidth="236.0">
+               <children>
+                  <Button fx:id="B_Reservar" contentDisplay="RIGHT" layoutX="43.0" layoutY="29.0" mnemonicParsing="false" onAction="#Reservar" prefHeight="60.0" prefWidth="150.0" text="RESERVAR">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="35.0">
+                           <image>
+                              <Image url="@../imagenes/Icono.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Reservar el coche eléctrico" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

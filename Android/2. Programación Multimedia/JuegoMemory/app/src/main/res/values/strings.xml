@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JuegoMemory</string>
+    <string name="Boton_Jugar">Jugar</string>
+    <string name="Boton_Salir">Salir</string>
+    <string name="tv_Intentos">Intentos: </string>
+    <string name="tv_Aciertos">Aciertos: </string>
+</resources>

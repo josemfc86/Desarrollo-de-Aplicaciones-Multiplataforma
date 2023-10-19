@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Periódicos</string>
+    <string name="imagenURL">Periodico</string>
+    <string name="menuItemContactos">Ver Contactos</string>
+    <string name="menuItemMedio">Añadir Medio</string>
+    <string name="menuItemBorrar">Borrar</string>
+    <string name="tv_nombre">Nombre</string>
+    <string name="rb_generalista">Generalista</string>
+    <string name="rb_deportes">Deportes</string>
+    <string name="rb_politica">Política</string>
+    <string name="b_anadir">Añadir</string>
+    <string name="et_nombreMedio">Nombre del medio</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

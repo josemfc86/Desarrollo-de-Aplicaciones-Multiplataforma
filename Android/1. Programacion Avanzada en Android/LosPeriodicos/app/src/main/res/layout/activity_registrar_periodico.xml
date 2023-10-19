@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarPeriodicoActivity">
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/tv_nombre"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre">
+
+        <RadioButton
+            android:id="@+id/rb_generalista"
+            android:layout_width="199dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="30dp"
+            android:checked="true"
+            android:text="@string/rb_generalista"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_deportes"
+            android:layout_width="196dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/rb_deportes"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_politica"
+            android:layout_width="195dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/rb_politica"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/b_anadir"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="47dp"
+        android:onClick="onClick"
+        android:text="@string/b_anadir"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="289dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="@string/et_nombreMedio"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_nombre"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

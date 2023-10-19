@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="facturas_subinforme_DatosCliente" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b2622825-b47f-44c6-83ce-757d0c7278bd">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idCliente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$F{ID_Cliente}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM clientes where id_cliente = $P{idCliente};]]>
+	</queryString>
+	<field name="ID_Cliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="85" splitType="Stretch">
+			<textField>
+				<reportElement x="26" y="53" width="128" height="20" uuid="47e6790d-6991-4da0-9918-4002cdb92e6f"/>
+				<textFieldExpression><![CDATA["ID CLiente: "+$F{ID_Cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="33" width="229" height="20" uuid="45bfaf1f-705a-4b1c-9e7c-5f4dbfcfebd4"/>
+				<textFieldExpression><![CDATA["Nombre: "+$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="33" width="239" height="20" uuid="7761c321-288f-4424-9b97-f60118092b32"/>
+				<textFieldExpression><![CDATA["Dirección: "+$F{Direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="53" width="239" height="20" uuid="0c61235d-08ae-4382-8e8e-bcbad314c40a"/>
+				<textFieldExpression><![CDATA["Ciudad: "+$F{Ciudad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="13" width="100" height="20" uuid="a4e76da4-14db-4b32-86b7-bc1de39aa171"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

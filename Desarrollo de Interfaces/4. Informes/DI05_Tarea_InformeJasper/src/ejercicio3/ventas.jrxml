@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="42bb3fc4-854e-43d0-b9c0-63e9f52b039e">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select dp.id_articulo, a.descripcion, sum(dp.Unidades) as 'Unidades_totales' from detalle_pedidos dp join articulos a  on dp.id_articulo = a.id_articulo group by dp.ID_Articulo;]]>
+	</queryString>
+	<field name="id_articulo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Unidades_totales" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="232" y="25" width="84" height="37" uuid="bd0ae214-ba39-4afb-adcd-a053e379cdf6"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VENTAS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="182" y="63" width="190" height="1" uuid="e151df28-2ab7-4012-9613-fccfa2bbd069"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="32" y="0" width="100" height="20" uuid="bb665e9f-2450-4702-b9ec-661ec2e2da5b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Artículo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="0" width="100" height="20" uuid="859c50e0-835e-48b7-baac-6a60cebf4885"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="0" width="128" height="20" uuid="64d4de0f-f2e6-4098-b160-bb4d1252f0ec"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidades Totales Vendidas]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="32" y="0" width="100" height="20" uuid="32e92c59-9d80-404b-8255-eee82a4f135d"/>
+				<textFieldExpression><![CDATA[$F{id_articulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="0" width="100" height="20" uuid="efa3be93-a3bb-4723-a698-9a568939e46e"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="0" width="100" height="20" uuid="0204fc1d-6364-4474-9168-926566556cd0"/>
+				<textFieldExpression><![CDATA[$F{Unidades_totales}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="373" splitType="Stretch">
+			<line>
+				<reportElement x="17" y="14" width="512" height="1" uuid="b1da4aa3-7df2-40a9-b42e-7584e2deb101"/>
+			</line>
+			<barChart>
+				<chart>
+					<reportElement x="17" y="37" width="512" height="316" uuid="acb3b5e7-0be6-487b-a75f-6715370f41d0"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["VENTAS TOTALES POR ARTICULO"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{id_articulo}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{Unidades_totales}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

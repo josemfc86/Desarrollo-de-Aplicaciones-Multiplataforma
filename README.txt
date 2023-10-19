@@ -1,0 +1,1 @@
+En este repositorio se encuentran los proyectos más relevantes del 2do curso de DAM.
