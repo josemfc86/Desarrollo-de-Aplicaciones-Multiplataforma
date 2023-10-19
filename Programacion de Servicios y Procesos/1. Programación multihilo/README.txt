@@ -1,4 +1,4 @@
-Realización de un programa en java que simula un buzón de correo (recurso compartido), de forma que se pueda enviar un mensaje o leer un mensaje. El buzón sólo puede almacenar un mensaje, de manera que para poder escribir se debe encontrar vacío y para poder leer debe estar lleno. Se crean varios hilos lectores y escritores que manejen dicho buzón de forma sincronizada.
+Realización de un programa en java que simula un buzón de correo (recurso compartido), de forma que se pueda enviar o leer un mensaje. El buzón sólo puede almacenar un mensaje, de manera que para poder escribir se debe encontrar vacío y para poder leer debe estar lleno. Se crean varios hilos lectores y escritores que manejen dicho buzón de forma sincronizada.
 
 Clases necesarias:
 
